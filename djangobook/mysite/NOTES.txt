@@ -1,0 +1,45 @@
+=============================================================================
+--------------------------------URL CONFS------------------------------------
+=============================================================================
+
+- A URLconf is like a table of contents for your Django-powered Web site.
+Basically, it’s a mapping between URLs and the view functions that should be
+called for those URLs. It’s how you tell Django, “For this URL, call this code,and for that URL,
+call that code.” For example, “When somebody visits the URL /foo/, call the view function
+foo_view(),which lives in the Python module views.py.”
+
+In summary:
+
+1. A request comes in to /hello/.
+2. Django determines the root URLconf by looking at the ROOT_URLCONF setting.
+3. Django looks at all of the URLpatterns in the URLconf for the first one that matches /hello/.
+4. If it finds a match, it calls the associated view function.
+5. The view function returns an HttpResponse.
+6. Django converts the HttpResponse to the proper HTTP response, which results in a Web page.
+
+
+DIFFERENCES BETWEEN MTV AND MVC:
+"Those three pieces together – data access logic, business logic, and presentation logic
+– comprise a concept that’s sometimes called the Model-View-Controller (MVC)
+pattern of software architecture. In this pattern, “Model” refers to the data access layer,
+“View” refers to the part of the system that selects what to display and how to display it,
+and “Controller” refers to the part of the system that decides which view to use, depending
+on user input, accessing the model as needed."
+
+
+--- M stands for “Model,” the data access layer.
+This layer contains anything and everything about the data:
+how to access it, how to validate it, which behaviors it has,
+and the relationships between the data.
+
+
+--- T stands for “Template,” the presentation layer.
+This layer contains presentation-related decisions:
+how something should be displayed on a Web page or other type of document.
+
+
+--- V stands for “View,” the business logic layer.
+This layer contains the logic that access the model and defers to the appropriate template(s).
+You can think of it as the bridge between models and templates.
+
+
